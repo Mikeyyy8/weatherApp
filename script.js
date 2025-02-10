@@ -37,14 +37,14 @@ async function weatherApp(q) {
 
 // fetch user location
 fetch('https://ipapi.co/json')
-.then(response =>{
-    return response.json();
-})
-.then(data => {
-    let userLocation = data.region;
-    // console.log(userLocation)
-    weatherApp(userLocation);
-}).catch(Error => console.error(`Error ${Error}`));
+    .then(response => {
+        return response.json();
+    })
+    .then(data => {
+        let userLocation = data.region;
+        // console.log(userLocation)
+        weatherApp(userLocation);
+    }).catch(Error => console.error(`Error ${Error}`));
 
 
 go.addEventListener("click", () => {
