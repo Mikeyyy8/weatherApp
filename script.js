@@ -5,6 +5,14 @@ const go = document.getElementById("go");
 const main = document.getElementById("mainImg");
 let weather = document.querySelector(".weather_condition");
 
+fetch("./condition.json")
+.then(response => response.json())
+.then(data =>{
+    data;
+})
+.catch(Error => console.log("Error" + Error));
+
+
 async function weatherApp(q) {
     const fullUrl = `${apiUrl}?key=${key}&q=${q}`;
     await fetch(fullUrl)
